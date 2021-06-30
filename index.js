@@ -23,6 +23,9 @@ app.use(express.json())
 app.use('/api/user',authRoute)
 app.use ('/api/posts',postRoute)
 
+app.get('/', (req,res) => {
+    res.send("Welcome to my api")
+})
 app.listen(process.env.PORT|| 3500,()=>{
     console.log("The app running on port 3500");
 })
